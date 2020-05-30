@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8">
+    <title>GreenGlade</title>
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Fontawesome CSS -->
+    <link href="css/all.css" rel="stylesheet">
+    <!-- Custom styles -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-light top-nav fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo4.png" alt="logo" style="width: 120px; height: 95px;">
+            </a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="fas fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html"><i class="fa fa-home"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="energia.html">Energia Renovável</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                     Fontes
+                     </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
+                            <a class="dropdown-item" href="solar.html">Solar</a>
+                            <a class="dropdown-item" href="eolica.html">Eólica</a>
+                            <a class="dropdown-item" href="hidrica.html">Hídrica</a>
+                            <a class="dropdown-item" href="maremotriz.html">Maremotriz</a>
+                            <a class="dropdown-item" href="biomassa.html">Biomassa</a>
+                            <a class="dropdown-item" href="geotermica.html">Geotérmica</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="quiz.html">Quiz</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- full Title -->
+    <div class="full-title">
+        <div class="container">
+            <!-- Page Heading/Breadcrumbs -->
+            <h1 class="mt-4 mb-3">Quiz</h1>
+        </div>
+    </div>
+
+    <!-- Page Content -->
+    <div class="container">
+        <div class="breadcrumb-main">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="index.html"><i class="fa fa-home"></i></a>
+                </li>
+                <li class="breadcrumb-item active">Quiz</li>
+            </ol>
+        </div>
+
+        <!-- Portfolio Item Row -->
+        <br><br><br>
+        <center>
+            <h3 style="background-color: #b8b894;">Neste quiz há 6 peguntas com 3 alternativas, somente uma é a correta. Divirta-se!</h3>
+        </center>
+        <br><br>
+        <div class="col-md-12 w-75 mx-auto">
+
+            <h4 id="labelPergunta">Pergunta</h4>
+
+            <input type="button" value="alternativa A" class="btn btn-success w-100 my-2 alternativa" id="alternativa1" onclick="corrigir(this.value)">
+            <input type="button" value="alternativa B" class="btn btn-success w-100 my-2 alternativa" id="alternativa2" onclick="corrigir(this.value)">
+            <input type="button" value="alternativa C" class="btn btn-success w-100 my-2 alternativa" id="alternativa3" onclick="corrigir(this.value)">
+
+            <div class="w-100 h-100 position-absolute p-3 d-flex flex-column" id="divResultado" style="background-color: rgba(0, 0, 0, 0.6); top:0; left:0; visibility: hidden;">
+                <label class="text-light align-top"><h3 id="labelAcertou">Você Acertou!!</h3></label>
+                <label class="text-light align-middle"><p id="labelResposta">Resposta</p></label>
+
+                <input type="button" value="Próxima" class="btn btn-white w-25 mx-auto mt-auto" onclick="proxima()">
+            </div>
+
+            <div class="w-100 h-100 position-absolute p-3 d-flex flex-column" id="divResultadoFinal" style="background-color: #006600; top:0; left:0; visibility: hidden;">
+                <label class="text-light"><h3 id="labelResultadoFinal"></h3></label>
+                <input type="button" value="Tentar de novo" class="btn btn-light w-25 mx-auto mt-auto" onclick="reiniciar()">
+            </div>
+        </div>
+    </div>
+    <br><br><br>
+
+    <!--footer starts from here-->
+    <footer class="footer">
+        <div class="container bottom_border">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-6 col">
+                    <h5 class="headin5_amrc col_white_amrc pt2">Integrantes do projeto</h5>
+                    <!--headin5_amrc-->
+                    <p><i class="fa fa-user"></i> Bruno Sousa Santos Ribamar || RA: N6630J-7</p>
+                    <p><i class="fa fa-user"></i> Julio Wesley da Mota Campos || RA: N667DB-5</p>
+                    <p><i class="fa fa-user"></i> Leandro Couto Messias || RA: N6438D-5</p>
+                    <p><i class="fa fa-user"></i> Lucas Nunes Augusto || RA: N653CG-5</p>
+                    <p><i class="fa fa-user"></i> Renan Gabriel Florencio Lima || RA: N60085-3</p>
+                </div>
+                <!--footer_ul_amrc ends here-->
+            </div>
+        </div>
+        </div>
+        <div class="container">
+            <div class="footer-logo">
+                <a href="index.html"><img src="images/logo4.png" alt="" /></a>
+            </div>
+        </div>
+    </footer>
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="js/perguntas.js"></script>
+</body>
+
+</html>
